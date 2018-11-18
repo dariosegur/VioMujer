@@ -38,11 +38,13 @@ export class GeografiaProvider {
       });  
   }
 
-  Report(Direccion, Descripcion){
+  Report(Direccion, Descripcion,Telefono,Ubicacion){
 
     let postData = {
       "Descripcion": Descripcion,
       "Direccion": Direccion,
+      "Telefono":Telefono,
+      "Ubicacion":Ubicacion,
       "FechaReporte": new Date().toISOString()
     }
     return new Promise(
