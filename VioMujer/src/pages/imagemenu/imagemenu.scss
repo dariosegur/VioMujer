@@ -1,0 +1,25 @@
+page-imagemenu {
+    ion-grid{
+        height: 100%;
+    }
+    ion-row:nth-child(2n+1){
+        // border: solid;
+        height: 40%;
+        align-items: center;
+        justify-items: end;
+    }
+    ion-row:nth-child(2n){
+        // border: solid;
+        height: 5%;
+        text-align: center;
+    }
+    // ion-col{
+    //     border: solid;
+    // }
+    .imagen{
+        width: auto;
+        height:auto;
+        align-self: center;
+        justify-self: center;
+    }
+}

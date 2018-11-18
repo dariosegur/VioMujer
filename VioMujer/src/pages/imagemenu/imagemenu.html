@@ -1,0 +1,36 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>
+        {{title}}
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+    <ion-grid>
+      <ion-row>
+          <ion-col col-6>
+              <img *ngIf=" items[0] != null" class="imagen" (click)="imgClick(items[0])" src="../assets/imgs/{{items[0].imagen}}">
+          </ion-col>
+          <ion-col col-6>
+              <img *ngIf=" items[1] != null" class="imagen" (click)="imgClick(items[1])"  src="../assets/imgs/{{items[1].imagen}}">
+          </ion-col>
+        </ion-row>
+    <ion-row>
+        <ion-col col-6 *ngIf=" items[0] != null">{{items[0].title}}</ion-col>
+        <ion-col col-6 *ngIf=" items[1] != null">{{items[1].title}}</ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col col-6>
+            <img *ngIf=" items[2] != null" class="imagen" (click)="imgClick(items[2])"  src="../assets/imgs/{{items[2].imagen}}">      
+        </ion-col>
+        <ion-col col-6>
+            <img *ngIf=" items[3] != null" class="imagen" (click)="imgClick(items[3])"  src="../assets/imgs/{{items[3].imagen}}">      
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col col-6 *ngIf=" items[2] != null">{{items[2].title}}</ion-col>
+        <ion-col col-6 *ngIf=" items[3] != null">{{items[3].title}}</ion-col>
+    </ion-row>
+    </ion-grid>
+  </ion-content>

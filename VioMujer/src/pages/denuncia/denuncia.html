@@ -1,0 +1,45 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{title}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<!-- Uso de la camara -->
+<!-- https://blog.ng-classroom.com/blog/ionic2/camera-and-ionic/ -->
+<ion-content padding>
+  <ion-scroll scrollX="true" scrollY="false">
+    <div class="imagen">
+      <button ion-button block (click)="getPicture()">Toma una foto</button>
+      <img  src="../assets/imgs/Camara.png" *ngIf="imagenReporte==null">
+      <img [src]="imagenReporte" *ngIf="imagenReporte" /> 
+    </div>
+  </ion-scroll>
+  <ion-scroll>
+    <!-- <ion-item>
+      <ion-label>Departamento</ion-label>
+      <ion-select>
+        <ion-option *ngFor="let item of Departamentos">
+          {{item.Nombre}}
+        </ion-option>
+      </ion-select>
+    </ion-item> -->
+    <ion-item>
+      <ion-label stacked>Ubicacion (Departamento/Ciudad/Barrio/Localidad)</ion-label>
+      <ion-input [(ngModel)]="Ubicacion"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Telefono</ion-label>
+      <ion-input [(ngModel)]="Telefono"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label stacked>Direccion</ion-label>
+        <ion-input [(ngModel)]="Direccion"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label stacked>Descripcion</ion-label>
+        <ion-textarea [(ngModel)]="Descripcion"></ion-textarea>
+      </ion-item>
+      <button ion-button full (click)="Reporte()">Reportar</button>
+  </ion-scroll>
+</ion-content>

@@ -1,0 +1,30 @@
+page-home {
+    div[class="column"]{
+        height:100%;
+    }
+    div[class="row"]:nth-child(1){
+        background-color:white;
+        height: 60%;
+    }
+    div[class="row"]:nth-child(2){
+        height: 5%;
+    }
+    div[class="row"]:nth-child(3){
+        height: 30%;
+    }
+    div[class="row"]:nth-child(3) h2{
+        text-align: right;
+        vertical-align: middle;
+        font-family: "Comic Sans MS", cursive, sans-serif;
+        font-size: 155%;
+    }
+    div[class="row"]:nth-child(4){
+        height: 10%;
+    }
+    .imagen{
+        width: auto;
+        height: auto;
+        align-self: center;
+        justify-self: center;
+    }
+}

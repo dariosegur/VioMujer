@@ -1,0 +1,7 @@
+{
+  "name": "VioMujer",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

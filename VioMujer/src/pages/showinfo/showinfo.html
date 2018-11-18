@@ -1,0 +1,18 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{title}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-scroll scrollX="true" scrollY="false">
+    <div class="imagen">
+      <img  src="../assets/imgs/{{image}}">
+    </div>
+  </ion-scroll>
+  <ion-scroll scrollX="true" scrollY="true">
+      <p [innerHTML]="info"></p>
+  </ion-scroll>
+</ion-content>
