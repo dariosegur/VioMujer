@@ -34,16 +34,19 @@ export class DenunciaPage {
       });
   }
 
-  uploadFile() {   
+  uploadFile(id) {   
     const fileTransfer: FileTransferObject = this.transfer.create();
   
     let options: FileUploadOptions = {
-      fileKey: 'ionicfile',
-      fileName: 'ionicfile',
+      fileKey: 'file',
+      fileName: 'file',
       chunkedMode: false,
       mimeType: "image/jpeg",
+      params:{'Id':id},
+      httpMethod:"POST",
       headers: {}
     }
+    console.log("Iniciando carga de evidencia....");  
       fileTransfer.upload(this.imagenReporte, 'http://paidcoldev.com/Denuncia/UploadImagen', options)
       .then((data) => {
       console.log(data+" Uploaded Successfully");  
@@ -56,9 +59,9 @@ export class DenunciaPage {
   Reporte(){
     this.Geografia.Report(this.Direccion,this.Descripcion,this.Telefono, this.Ubicacion).then(
       data=>{
-        alert(data);
+        console.log(data);
         if(this.imagenReporte!=null){
-          this.uploadFile();
+          this.uploadFile(data);
         }else{
           alert("Reporte enviado");
         }
